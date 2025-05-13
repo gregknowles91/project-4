@@ -3,7 +3,9 @@ Research Question: Which fuel types retain better value over time?
 
 Data Cleaning:
 
-Cleaned columns: fuel_types, manufacturing_year, vehicle age, pricein_laks
+Calculated and created a separate column for vehicle age
+
+Merged datasets and cleaned columns: fuel_types, manufacturing_year, vehicle age, pricein_laks
 
 Findings:
 
