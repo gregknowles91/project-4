@@ -20,5 +20,5 @@ According to the data, petrol vehicles maintained the highest value in vehicle a
 
 Bar Graph on Tableau: 
 
-A horizontal bar graph was made on tableau with three bars color-coded by fuel type. The graph was split up into two sections displaying vehicle age and avg. price in lakhs. The user can interact with the data by hovering over each bar with their mouse and receiving a text box that displays vehicle type, avg. price in lakhs and fuel type.
+A horizontal bar graph was made on tableau with three bars color-coded by fuel type. The graph was split up into two sections displaying vehicle age and avg. price in lakhs. The user can interact with the data by hovering over each bar with their mouse and receiving a text box that displays fuel type, avg. price in lakhs and vehicle age.
 
