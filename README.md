@@ -1,36 +1,44 @@
 # project-4
-# Engine-to-Price Ratio Analysis
-This module analyzes which car manufacturers and models offer the best
-performance value for enthusiasts by calculating the engine size to price
-ratio.
-## Methodology
-1. **Data Preprocessing**:
-- Extracts engine size in cc from string descriptions
-- Converts price strings to numeric values
-- Calculates engine-to-price ratio
-2. **Analysis Performed**:
-- Brand-level comparison of engine-to-price ratios
-- Model-level comparison of engine-to-price ratios
+# Used Car Power-to-Price Analysis and Prediction
 
-- Analysis by vehicle age
-- Analysis by fuel type
+This project analyzes and predicts the power-to-price ratio of used cars to identify which brands and models provide the best value in terms of horsepower per dollar.
 
-3. **Key Visualizations**:
-- Bar chart of top brands by engine-to-price ratio
-- Bar chart of top models by engine-to-price ratio
-- Scatter plot of price vs. engine size
-- Comprehensive dashboard combining multiple analyses
-## Key Findings
-[Fill in your key findings after running the analysis]
-## Usage
+1. Data Preprocessing
+    •    Cleaned raw CSV file with car listings
+    •    Extracted numeric features from text fields (e.g., price, engine size)
+    •    Created new variables like power_to_price, vehicle_age, and age_group
+    •    Dropped irrelevant columns and handled missing values
 
+2. Exploratory Data Analysis
 
+We used various graphs to analyze how the power-to-price ratio varies by:
+    •    Brand – Ranked all brands, then highlighted top and bottom 15 brands
+    •    Model – Identified top 20 models offering the best value
+    •    Vehicle Age – Found that mid-aged vehicles (6–20 years) give the highest value
+    •    Fuel Type – Diesel and flex fuel showed higher power-to-price ratios
+    •    Scatter Plot – Visualized the relationship between engine horsepower and price across brands and age groups
 
-# Load and preprocess your data
-df = pd.read_csv(used_cars.csv)
-processed_df = preprocess_engine_data(df)
-# Generate analyses
-brand_ratios = generate_brand_analysis(processed_df)
-model_ratios = generate_model_analysis(processed_df)
-# Create visualizations
-plot_top_brands(brand_ratios)
+3. Machine Learning Model
+
+To predict the power-to-price ratio, we built a pipeline using:
+    •    Preprocessing: StandardScaler, OneHotEncoder for numeric and categorical data
+    •    Model: RandomForestRegressor
+    •    Optimization: Used RandomizedSearchCV to tune hyperparameters (n_estimators, max_depth)
+
+Model Evaluation
+    •    RMSE and MAE were calculated on the test set
+    •    Predicted vs. Actual scatter plot showed a strong linear trend, indicating the model performed well in estimating power-to-price values
+
+4. Key Visualizations
+    •    Bar charts of top/bottom brands and models by power-to-price
+    •    Average value comparisons by age and fuel type
+    •    Scatter plot showing price vs. horsepower
+    •    Predicted vs. Actual power-to-price chart
+
+5. Usage
+
+Run the notebook end-to-end to reproduce:
+    •    The data wrangling and feature engineering steps
+    •    Insightful visual analyses
+    •    A trained prediction model with evaluation metrics
+    •    Saved model using joblib for reuse
