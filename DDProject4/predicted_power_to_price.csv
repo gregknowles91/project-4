@@ -1,0 +1,4 @@
+price_numeric $,vehicle_age,milage_numeric,engine_hp HP,brand,predicted_power_to_price
+15000,5,50000,250,Toyota,16.348799999999997
+22000,3,30000,300,BMW,13.59540000000001
+60000,1,3000,400,Mercedes,6.587699999999999
