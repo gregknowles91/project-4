@@ -42,3 +42,7 @@ Run the notebook end-to-end to reproduce:
     •    Insightful visual analyses
     •    A trained prediction model with evaluation metrics
     •    Saved model using joblib for reuse
+    
+ 6. Power-to-Price Prediction Web App
+
+         I developed an interactive web application using Flask and HTML that predicts the power-to-price ratio of used cars. The user inputs key car attributes such as price, vehicle age, mileage, horsepower, and selects the brand from a dropdown menu. Once submitted, the trained machine learning model returns the predicted power-to-price ratio. This tool provides a quick and intuitive way to evaluate the performance value of a car based on its specifications.
