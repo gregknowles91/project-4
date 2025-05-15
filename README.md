@@ -1,107 +1,24 @@
----Car Price Prediction
-A data-driven machine learning project designed to predict used car prices based on key features such as brand, mileage, transmission type, fuel type, engine horsepower, and more. This project involves data cleaning, exploratory data analysis, model training, and deployment-ready prediction functionality using models like Random Forest Regressor and XGBoost.
+# project-4
+Research Question: Which fuel types retain better value over time?
 
-📊 Features
-Data preprocessing & feature engineering
+Data Cleaning:
 
-Outlier detection & removal using IQR
+Calculated and created a separate column for vehicle age
 
-Exploratory Data Analysis (EDA) with visualizations
+Merged datasets and cleaned columns: fuel_types, manufacturing_year, vehicle age, pricein_laks
 
-OneHotEncoding of categorical features
+Findings:
 
-Model training using:
+Petrol Fuel: Vehicle Age: Up to 18 years, Avg. Price: 247.3 Lakhs
 
-Random Forest Regressor
+Diesel Fuel: Vehicle Age: Up to 16 years, Avg. Price: 20.3 Lakhs
 
-XGBoost Regressor
+CNG Fuel: Vehicle Age: Up to 12 years, Avg. Price: 5.2 Lakhs
 
-Model evaluation using R², MAE, and RMSE
+According to the data, petrol vehicles maintained the highest value in vehicle age and avg. price compared to diesel and CNG. This may be due to a higher demand for this fuel type as most vehicles use petrol. Diesel and CNG vehicles have a much lower avg. price, implying they are much lower in demand and may depreciate faster over time compared to petrol.
 
-Gradio interface for real-time predictions
 
-🧰 Tech Stack
-Languages: Python
+Bar Graph on Tableau: 
 
-Libraries:
-pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost, gradio
+A horizontal bar graph was made on tableau with three bars color-coded by fuel type. The graph was split up into two sections displaying vehicle age and avg. price in lakhs. The user can interact with the data by hovering over each bar with their mouse and receiving a text box that displays fuel type, avg. price in lakhs and vehicle age.
 
-📂 Dataset
-car_data.csv: Raw dataset of used cars.
-
-old_car_data.csv: Cleaned version after preprocessing and outlier removal.
-
-🛠️ Setup Instructions
-Clone the repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/car-price-prediction.git
-cd car-price-prediction
-Install dependencies:
-
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run the notebook or script to train the model.
-Ensure you have the dataset in the root directory.
-
-(Optional) Run Gradio app:
-
-bash
-Copy
-Edit
-python app.py
-🔍 Exploratory Data Analysis
-Distribution plots for price and miles
-
-Scatter plot for price vs. miles
-
-Boxplot of price by fuel type
-
-Average price by top 15 brands
-
-Heatmap for correlation between price, year, miles, engine(hp)
-
-🧪 Model Evaluation
-Random Forest Regressor
-R² Score: 0.89+
-
-MAE: ~1500
-
-RMSE: ~2300
-
-XGBoost Regressor
-R² Score: 0.90+
-
-MAE: ~1400
-
-RMSE: ~2200
-
-📌 Top 5 Features (Random Forest):
-
-Mileage
-
-Year
-
-Brand
-
-Engine (HP)
-
-Fuel type
-
-🔮 Prediction Function
-Example prediction input:
-
-python
-Copy
-Edit
-predict_price('FIAT', 2013, 'Manual', 'Gasoline', 2, 30068, 135)
-Returns:
-
-nginx
-Copy
-Edit
-Predicted Price: $5,800.00
